@@ -4,8 +4,16 @@ import { Link } from 'react-router-dom';
 const NavBar = ({ currentUser, logout }) => {
     const anonymousNav = () => (
         <nav className="nav-tools">
+            <form className="nav-search-bar">
+                <i class="fas fa-search"></i>
+                <div className="nav-search-pillow"></div>
+                <input 
+                    type="text"
+                    class="nav-search-input"
+                    placeholder="Photos, people, or groups"
+                />
+            </form>
             <Link to="/login" className="nav-login">Login</Link>
-            &nbsp;or&nbsp;
             <Link to="/signup" className="nav-signup">Sign up!</Link>
         </nav>
     );
@@ -19,8 +27,10 @@ const NavBar = ({ currentUser, logout }) => {
     };
 
     return (
-        <div className="global-nav">
-            <div className="nav-logo">dexr</div>
+        <div className="header-nav">
+            <div className="nav-logo-container">
+                <div className="nav-logo">dexr</div>
+            </div>
             {currentUser ? personalNav() : anonymousNav()}
         </div>
     )
