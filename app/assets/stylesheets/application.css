@@ -13,3 +13,62 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+ box-sizing: border-box;
+}
+
+.app {
+ min-height: 100vh; /* will cover the 100% of viewport */
+ overflow: hidden;
+ display: block;
+ position: relative;
+ padding-bottom: 52px;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    position: relative;
+}
+
+.global-nav {
+     display: block;
+     width: 100%;
+     background: red;
+ }
+
+.nav-logo{}
+
+.nav-tools{}
+
+.nav-search-bar{}
+
+.nav-login{}
+
+.nav-signup{}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    height: 52px;
+    width: 100%;
+    background: black;
+    color: grey;
+}
+
+.footer-nav{}
+
+.footer-nav-list{}
+
+.footer-nav-list > li {}
+
+
+/* This is be used for the header */
+/* img {
+  opacity: 0.5;
+}
+
+img:hover {
+  opacity: 1.0;
+} */

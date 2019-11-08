@@ -36,6 +36,7 @@ class SessionForm extends React.Component {
     }
 
     render() {
+        console.log(this.props.history)
         return (
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
