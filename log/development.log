@@ -1794,3 +1794,12 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 310ms (Views: 307.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2019-11-07 17:03:09 -0800
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ninja_mac/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 1192ms (Views: 1189.7ms | ActiveRecord: 0.0ms)
+
+
