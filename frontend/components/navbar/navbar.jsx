@@ -13,9 +13,9 @@ const NavBar = ({ currentUser, logout }) => {
                     placeholder="Photos, people, or groups"
                 />
             </form>
-            <div className="login-container">
-                <Link to="/login" className="nav-login">Log in</Link>
-            </div>
+            {/* <div className="login-container"> */}
+                <Link to="/login" className="nav-login">Log In</Link>
+            {/* </div> */}
             <div className="signup-container">
                 <Link to="/signup" className="nav-signup">Sign Up</Link>
             </div>

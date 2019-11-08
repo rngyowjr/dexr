@@ -30,12 +30,7 @@
  display: block;
  position: relative;
  padding-bottom: 52px;
-}
-
-body {
-    margin: 0;
-    height: 100%;
-    position: relative;
+ font-family: Proxima Nova, helvetica neue,helvetica,arial,sans-serif;
 }
 
 .header-nav {
@@ -80,13 +75,10 @@ body {
     background-color: purple;
 }
 
-.login-container{
-    display: flex;
-    align-items: center;
-}
-
 .nav-login{
-    background-color: red;
+    text-decoration: none;
+    color: white;
+    margin-left: 23px;
 }
 
 .signup-container{
@@ -100,14 +92,16 @@ body {
     display: flex;
     align-items: center;
     background-color: white;
-    height: 32px;
+    text-decoration: none;
     padding: 0 20px 0 20px;
     border-radius: 4px;
-    text-decoration: none;
     color: black;
-    font-weight: 600;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
-    ;
+    font-weight: 500;
+}
+
+.nav-signup:hover{
+    transition: 0.3s;
+    color: grey;
 }
 
 .footer {

@@ -288,12 +288,10 @@ var NavBar = function NavBar(_ref) {
       type: "text",
       "class": "nav-search-input",
       placeholder: "Photos, people, or groups"
-    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "login-container"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
       to: "/login",
       className: "nav-login"
-    }, "Log in")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }, "Log In"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "signup-container"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
       to: "/signup",
