@@ -178,7 +178,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
+ // import Eevee from '../../app/assets/images/eevee.pgn';
 
 var App = function App() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -288,13 +288,17 @@ var NavBar = function NavBar(_ref) {
       type: "text",
       "class": "nav-search-input",
       placeholder: "Photos, people, or groups"
-    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "login-container"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
       to: "/login",
       className: "nav-login"
-    }, "Login"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    }, "Log in")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "signup-container"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
       to: "/signup",
       className: "nav-signup"
-    }, "Sign up!"));
+    }, "Sign Up")));
   };
 
   var personalNav = function personalNav() {

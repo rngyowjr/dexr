@@ -40,6 +40,7 @@ body {
 
 .header-nav {
      display: flex;
+     justify-content: space-between;
      width: 100%;
      height: 64px;
      background-color: grey;
@@ -51,39 +52,62 @@ body {
      background-color: turquoise;
      height: 64px;
      width: 87px;
+     justify-content: center;
  }
 
 .nav-logo{
+    display: flex;
+    align-items: center;
     background-color: violet;
     justify-content: center;
-    /* margin-left: 15px; */
-
+    margin-left: 15px;
 }
 
 .nav-tools{
-    justify-content: center;
+    display: flex;
     align-items: center;
-}
-
-.nav-tools > *{
-    float: left;
+    background-color: tomato;
+    margin-right: 12px;
 }
 
 .nav-search-bar{
+    display: flex;
     background-color: lightgreen;
     border: black solid 2px;
 }
 
 .nav-search-input{
-    background-color: lightsalmon;
+    background-color: purple;
+}
+
+.login-container{
+    display: flex;
+    align-items: center;
 }
 
 .nav-login{
     background-color: red;
 }
 
+.signup-container{
+    display: flex;
+    align-content: center;
+    height: 32px;
+    margin-left: 23px;
+}
+
 .nav-signup{
-    background-color: blue;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    height: 32px;
+    padding: 0 20px 0 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    ;
 }
 
 .footer {

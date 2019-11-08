@@ -13,8 +13,12 @@ const NavBar = ({ currentUser, logout }) => {
                     placeholder="Photos, people, or groups"
                 />
             </form>
-            <Link to="/login" className="nav-login">Login</Link>
-            <Link to="/signup" className="nav-signup">Sign up!</Link>
+            <div className="login-container">
+                <Link to="/login" className="nav-login">Log in</Link>
+            </div>
+            <div className="signup-container">
+                <Link to="/signup" className="nav-signup">Sign Up</Link>
+            </div>
         </nav>
     );
     const personalNav = () => {

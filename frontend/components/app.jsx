@@ -6,6 +6,7 @@ import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
 import PhotoIndexContainer from './photo_index/photo_index_container';
 import FooterContainer from './footer/footer_container';
+// import Eevee from '../../app/assets/images/eevee.pgn';
 
 const App = () => (
     <div class="app">
@@ -19,6 +20,7 @@ const App = () => (
                 <Route path="/signup" component={SignupFormContainer} />
                 <Route path="/login" component={LoginFormContainer} />
             </Switch>
+            {/* <img src="Eevee" alt="Eevee"/> */}
         </section>
         <footer class="footer">
             <FooterContainer />
