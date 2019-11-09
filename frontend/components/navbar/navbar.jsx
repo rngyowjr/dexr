@@ -5,19 +5,19 @@ const NavBar = ({ currentUser, logout }) => {
     const anonymousNav = () => (
         <nav className="nav-tools">
             <form className="nav-search-bar">
-                <i class="fas fa-search"></i>
+                <i className="fas fa-search"></i>
                 <div className="nav-search-pillow"></div>
                 <input 
                     type="text"
-                    class="nav-search-input"
+                    className="nav-search-input"
                     placeholder="Photos, people, or groups"
                 />
             </form>
-            {/* <div className="login-container"> */}
+            <div className="nav-entry-container">
                 <Link to="/login" className="nav-login">Log In</Link>
-            {/* </div> */}
-            <div className="signup-container">
-                <Link to="/signup" className="nav-signup">Sign Up</Link>
+                <div className="signup-container">
+                    <Link to="/signup" className="nav-signup">Sign Up</Link>
+                </div>
             </div>
         </nav>
     );

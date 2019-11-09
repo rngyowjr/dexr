@@ -1,0 +1,94 @@
+
+.header-nav {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     width: 100%;
+     height: 64px;
+     background-color: grey;
+     padding: 0 24px 0 24px;
+ }
+
+.nav-logo-container{
+     display: flex;
+     /* background-color: turquoise; */
+     height: 64px;
+     width: 87px;
+     justify-content: center;
+}
+
+.nav-logo{
+    display: flex;
+    align-items: center;
+    /* background-color: violet; */
+    justify-content: center;
+    margin-left: 15px;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-tools{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: tomato;
+    margin-right: 12px;
+    margin-left: auto;
+    width: 100%;
+}
+
+.nav-search-bar{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: black solid 2px;
+    height: 33px;
+    padding: 0 100px 0 100px;
+    margin-left: 23px;
+}
+
+.nav-search-input{}
+
+.nav-entry-container{
+    display: flex;
+    align-items: center;
+}
+
+.nav-login{
+    text-decoration: none;
+    color: white;
+    margin-left: 23px;
+}
+
+.signup-container{
+    display: flex;
+    align-content: center;
+    height: 32px;
+    margin-left: 23px;
+}
+
+.nav-signup{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    text-decoration: none;
+    padding: 0 20px 0 20px;
+    border-radius: 4px;
+    color: black;
+    font-weight: 500;
+}
+
+.nav-signup:hover{
+    transition: 0.3s;
+    color: grey;
+}
+
+/* This is be used for the header */
+/* img {
+  opacity: 0.5;
+}
+
+img:hover {
+  opacity: 1.0;
+} */

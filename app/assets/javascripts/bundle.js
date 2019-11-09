@@ -178,13 +178,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- // import Eevee from '../../app/assets/images/eevee.pgn';
+ // import Eevee from '../../app/assets/images/eevee.png';
 
 var App = function App() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "app"
+    className: "app"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_navbar_navbar_container__WEBPACK_IMPORTED_MODULE_2__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
-    "class": "section"
+    className: "section"
   }, " PRAISE THE SUN \\[T]/", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     path: "/index",
     component: _photo_index_photo_index_container__WEBPACK_IMPORTED_MODULE_5__["default"]
@@ -195,7 +195,7 @@ var App = function App() {
     path: "/login",
     component: _session_form_login_form_container__WEBPACK_IMPORTED_MODULE_3__["default"]
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", {
-    "class": "footer"
+    className: "footer"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_footer_footer_container__WEBPACK_IMPORTED_MODULE_6__["default"], null)));
 };
 
@@ -223,7 +223,7 @@ var Footer = function Footer(_ref) {
     className: "footer-nav"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "footer-nav-list"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "about"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Jobs "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Blog "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Developers "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Guidelines "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Privacy "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Terms "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Help "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Help Forum "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "English ")));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "About"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Jobs "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Blog "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Developers "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Guidelines "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Privacy "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Terms "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Help "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Help forum "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "English ")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Footer);
@@ -281,14 +281,16 @@ var NavBar = function NavBar(_ref) {
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
       className: "nav-search-bar"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-      "class": "fas fa-search"
+      className: "fas fa-search"
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "nav-search-pillow"
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
       type: "text",
-      "class": "nav-search-input",
+      className: "nav-search-input",
       placeholder: "Photos, people, or groups"
-    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "nav-entry-container"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
       to: "/login",
       className: "nav-login"
     }, "Log In"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -296,7 +298,7 @@ var NavBar = function NavBar(_ref) {
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
       to: "/signup",
       className: "nav-signup"
-    }, "Sign Up")));
+    }, "Sign Up"))));
   };
 
   var personalNav = function personalNav() {
