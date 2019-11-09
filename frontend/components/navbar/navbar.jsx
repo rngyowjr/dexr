@@ -4,21 +4,23 @@ import { Link } from 'react-router-dom';
 const NavBar = ({ currentUser, logout }) => {
     const anonymousNav = () => (
         <nav className="nav-tools">
-            <form className="nav-search-bar">
-                <i className="fas fa-search"></i>
-                <div className="nav-search-pillow"></div>
-                <input 
-                    type="text"
-                    className="nav-search-input"
-                    placeholder="Photos, people, or groups"
-                />
-            </form>
-            <div className="nav-entry-container">
+            <container className="nav-search-bar-container">
+                <div className="nav-search-bar">
+                    <i className="fas fa-search"></i>
+                    <div className="nav-search-pillow"></div>
+                    <input 
+                        type="text"
+                        className="nav-search-input"
+                        placeholder="Photos, people, or groups"
+                    />
+                </div>
+            </container>
+            <container className="nav-entry-container">
                 <Link to="/login" className="nav-login">Log In</Link>
                 <div className="signup-container">
                     <Link to="/signup" className="nav-signup">Sign Up</Link>
                 </div>
-            </div>
+            </container>
         </nav>
     );
     const personalNav = () => {

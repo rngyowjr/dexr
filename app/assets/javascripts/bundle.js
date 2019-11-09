@@ -278,7 +278,9 @@ var NavBar = function NavBar(_ref) {
   var anonymousNav = function anonymousNav() {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
       className: "nav-tools"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("container", {
+      className: "nav-search-bar-container"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "nav-search-bar"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
       className: "fas fa-search"
@@ -288,7 +290,7 @@ var NavBar = function NavBar(_ref) {
       type: "text",
       className: "nav-search-input",
       placeholder: "Photos, people, or groups"
-    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("container", {
       className: "nav-entry-container"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
       to: "/login",
