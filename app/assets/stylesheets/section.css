@@ -1,0 +1,10 @@
+.section{
+    background-color: darkorchid;
+    display: block;
+    position: fixed;
+    top: 64px;
+    right: 0;
+    bottom: 52px;
+    left: 0;
+    height: 100%;
+}

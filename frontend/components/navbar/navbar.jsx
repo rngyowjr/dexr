@@ -35,7 +35,7 @@ const NavBar = ({ currentUser, logout }) => {
     return (
         <div className="header-nav">
             <div className="nav-logo-container">
-                <div className="nav-logo">dexr</div>
+                <Link to="/" className="nav-logo">dexr</Link>
             </div>
             {currentUser ? personalNav() : anonymousNav()}
         </div>

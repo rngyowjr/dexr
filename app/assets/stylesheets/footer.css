@@ -9,10 +9,17 @@
     color: grey;
 }
 
+.footer-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 .footer-nav{
     display: flex;
     align-items: center;
     width: 100%;
+    max-width: 1060px;
 }
 
 .footer-nav-list{

@@ -1,0 +1,7 @@
+.splash{
+    display: block;
+    /* background-image: image-url("eevee.png"); */
+    background-color: darkred;
+    width: 100%;
+    color: white;
+}
