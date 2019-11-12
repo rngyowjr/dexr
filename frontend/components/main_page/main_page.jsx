@@ -12,9 +12,12 @@ const MainPage = ({ currentUser }) => {
     );
 
     const splash = () => (
-        <div className="splash-container">
-            <SplashContainer />
-            <FooterContainer />
+        <div className="test">
+            <div className="splash-container">
+                <div className="splash-image-container"></div>
+                <SplashContainer />
+                <FooterContainer />
+            </div>
         </div>
     );
 

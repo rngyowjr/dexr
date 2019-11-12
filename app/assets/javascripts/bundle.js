@@ -171,14 +171,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _main_page_main_page_container__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./main_page/main_page_container */ "./frontend/components/main_page/main_page_container.js");
 /* harmony import */ var _session_form_signup_form_container__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./session_form/signup_form_container */ "./frontend/components/session_form/signup_form_container.jsx");
 /* harmony import */ var _session_form_login_form_container__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./session_form/login_form_container */ "./frontend/components/session_form/login_form_container.jsx");
-/* harmony import */ var _photo_index_photo_index_container__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./photo_index/photo_index_container */ "./frontend/components/photo_index/photo_index_container.js");
 
 
 
 
 
 
- // import Eevee from '../../app/assets/images/eevee.png';
 
 var App = function App() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -195,7 +193,7 @@ var App = function App() {
     component: _session_form_login_form_container__WEBPACK_IMPORTED_MODULE_5__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     path: "/",
-    component: _photo_index_photo_index_container__WEBPACK_IMPORTED_MODULE_6__["default"]
+    component: _main_page_main_page_container__WEBPACK_IMPORTED_MODULE_3__["default"]
   }))));
 };
 
@@ -288,8 +286,12 @@ var MainPage = function MainPage(_ref) {
 
   var splash = function splash() {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "test"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "splash-container"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_splash_splash_container__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_footer_footer_container__WEBPACK_IMPORTED_MODULE_3__["default"], null));
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "splash-image-container"
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_splash_splash_container__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_footer_footer_container__WEBPACK_IMPORTED_MODULE_3__["default"], null)));
   };
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -480,9 +482,13 @@ function (_React$Component) {
   _createClass(PhotoIndex, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "this is the index"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "index-pic"
-      }));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "this is the index"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "dex",
+        src: window.images.pokedex,
+        alt: "test"
+      })));
     }
   }]);
 
@@ -766,7 +772,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _footer_footer_container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../footer/footer_container */ "./frontend/components/footer/footer_container.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -787,11 +792,6 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
- // import eevee from '../../../app/assets/images/eevee.png';
-
-{
-  /* <img src="{eevee}" alt="eevee"/> */
-}
 
 var Splash =
 /*#__PURE__*/

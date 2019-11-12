@@ -1,10 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import FooterContainer from '../footer/footer_container';
-// import eevee from '../../../app/assets/images/eevee.png';
-{/* <img src="{eevee}" alt="eevee"/> */}
-
 class Splash extends React.Component {
     render() {
         return (
