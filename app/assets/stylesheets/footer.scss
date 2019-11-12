@@ -1,15 +1,15 @@
-.footer {
+.footer-container{
     display: flex;
-
     position: absolute;
     bottom: 0;
+    margin: auto;
     height: 52px;
     width: 100%;
     background-color: black;
     color: grey;
 }
 
-.footer-container{
+.footer{
     display: flex;
     justify-content: center;
     width: 100%;
@@ -31,4 +31,8 @@
 
 .footer-nav-list > li {
     font-size: 14px;
+}
+
+.footer-nav-list > li:hover {
+    color: lightgrey;
 }

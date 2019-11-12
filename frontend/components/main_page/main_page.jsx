@@ -1,7 +1,7 @@
 import React from 'react';
 import PhotoIndexContainer from '../photo_index/photo_index_container';
 import SplashContainer from '../splash/splash_container';
-
+import FooterContainer from '../footer/footer_container';
 
 const MainPage = ({ currentUser }) => {
 
@@ -14,6 +14,7 @@ const MainPage = ({ currentUser }) => {
     const splash = () => (
         <div className="splash-container">
             <SplashContainer />
+            <FooterContainer />
         </div>
     );
 
@@ -21,7 +22,7 @@ const MainPage = ({ currentUser }) => {
         <div className="main-page">
             {currentUser ? index() : splash()}
         </div>
-    )
+    );
 }
 
 export default MainPage;

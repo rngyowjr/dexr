@@ -14,22 +14,13 @@
  *= require_self
  */
 
-/* .group:after {
-    content: "";
-    display: block; 
-    clear: both;
-} */
-
 * {
  box-sizing: border-box;
 }
 
 .app {
- min-height: 100vh; /* will cover the 100% of viewport */
- overflow: hidden;
  display: block;
  position: relative;
- padding-bottom: 52px;
  font-family: Proxima Nova, helvetica neue,helvetica,arial,sans-serif;
 }
 
