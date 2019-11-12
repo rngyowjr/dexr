@@ -23,14 +23,12 @@ const NavBar = ({ currentUser, logout }) => {
             </container>
         </nav>
     );
-    const personalNav = () => {
-        return(
+    const personalNav = () => (
         <hgroup className="header-group">
             <h2 className="header-name">Heya {currentUser.username}!</h2>
             <button className="header-button" onClick={logout}>Log Out</button>
         </hgroup>
-        )
-    };
+    );
 
     return (
         <div className="header-nav">
