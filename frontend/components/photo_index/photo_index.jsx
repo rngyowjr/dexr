@@ -7,7 +7,7 @@ class PhotoIndex extends React.Component {
                 <div className="index-pic">
                     <h1>this is the index</h1>
 
-                    <img className="dex" src={window.images.pokedex} alt="test"/>
+                    <img className="dex" src={window.images.eevee} alt="test"/>
                 </div>
 
 

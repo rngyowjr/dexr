@@ -268,8 +268,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _photo_index_photo_index_container__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../photo_index/photo_index_container */ "./frontend/components/photo_index/photo_index_container.js");
-/* harmony import */ var _splash_splash_container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../splash/splash_container */ "./frontend/components/splash/splash_container.js");
-/* harmony import */ var _footer_footer_container__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../footer/footer_container */ "./frontend/components/footer/footer_container.js");
+/* harmony import */ var _slideshow_slideshow_container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../slideshow/slideshow_container */ "./frontend/components/slideshow/slideshow_container.js");
+/* harmony import */ var _splash_splash_container__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../splash/splash_container */ "./frontend/components/splash/splash_container.js");
+/* harmony import */ var _footer_footer_container__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../footer/footer_container */ "./frontend/components/footer/footer_container.js");
+
 
 
 
@@ -286,12 +288,8 @@ var MainPage = function MainPage(_ref) {
 
   var splash = function splash() {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "test"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "splash-container"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "splash-image-container"
-    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_splash_splash_container__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_footer_footer_container__WEBPACK_IMPORTED_MODULE_3__["default"], null)));
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_slideshow_slideshow_container__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_splash_splash_container__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_footer_footer_container__WEBPACK_IMPORTED_MODULE_4__["default"], null));
   };
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -486,7 +484,7 @@ function (_React$Component) {
         className: "index-pic"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "this is the index"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "dex",
-        src: window.images.pokedex,
+        src: window.images.eevee,
         alt: "test"
       })));
     }
@@ -757,6 +755,104 @@ var mDTP = function mDTP(dispatch) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mSTP, mDTP)(_session_form__WEBPACK_IMPORTED_MODULE_4__["default"]));
+
+/***/ }),
+
+/***/ "./frontend/components/slideshow/slideshow.jsx":
+/*!*****************************************************!*\
+  !*** ./frontend/components/slideshow/slideshow.jsx ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+var Slideshow =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(Slideshow, _React$Component);
+
+  function Slideshow() {
+    _classCallCheck(this, Slideshow);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Slideshow).apply(this, arguments));
+  }
+
+  _createClass(Slideshow, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "slideshow-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        className: "slideshow"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        className: "slide1"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        className: "slide2"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        className: "slide3"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        className: "slide4"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        className: "slide5"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        className: "slide6"
+      })));
+    }
+  }]);
+
+  return Slideshow;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (Slideshow);
+
+/***/ }),
+
+/***/ "./frontend/components/slideshow/slideshow_container.js":
+/*!**************************************************************!*\
+  !*** ./frontend/components/slideshow/slideshow_container.js ***!
+  \**************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _slideshow__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./slideshow */ "./frontend/components/slideshow/slideshow.jsx");
+
+
+
+var mSTP = function mSTP(state) {
+  return {};
+};
+
+var mDTP = function mDTP(dispatch) {
+  return {};
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mSTP, mDTP)(_slideshow__WEBPACK_IMPORTED_MODULE_1__["default"]));
 
 /***/ }),
 

@@ -1,17 +1,61 @@
-.test{
-    height: 100%;
-    width: 100%;
-}
-
-.splash-image-container{
-    background-image: linear-gradient(rgba(0,0,0, .5), rgba(0,0,0, .5)), image-url("eevee.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+.slideshow-container{
+    background-color: #212124;
     position: absolute;
     height: 94%;
     width: 100%;
     top: 0px;
     z-index: -1;
+}
+
+.slideshow li{
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    animation: imageAnimation 36s linear infinite 0s; 
+}
+
+@keyframes imageAnimation { 
+    0% { opacity: 0; animation-timing-function: ease-in; }
+    2% { opacity: 1; animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    19% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+.no-cssanimations .slideshow li:first-child{
+	opacity: 1;
+}
+
+.slideshow li:nth-child(1) { 
+    background-image: linear-gradient(rgba(0,0,0, .25), rgba(0,0,0, .25)), image-url("eevee.png");
+}
+
+.slideshow li:nth-child(2) { 
+    background-image: linear-gradient(rgba(0,0,0, .25), rgba(0,0,0, .25)), image-url("choice.png");
+    animation-delay: 6s;
+}
+
+.slideshow li:nth-child(3) { 
+    background-image: linear-gradient(rgba(0,0,0, .25), rgba(0,0,0, .25)), image-url("mew.png");
+    animation-delay: 12s;
+}
+
+.slideshow li:nth-child(4) { 
+    background-image: linear-gradient(rgba(0,0,0, .25), rgba(0,0,0, .25)), image-url("evoeevees.png");
+    animation-delay: 18s;
+}
+
+.slideshow li:nth-child(5) { 
+    background-image: linear-gradient(rgba(0,0,0, .2), rgba(0,0,0, .2)), image-url("pokego.png");
+    animation-delay: 24s;
+}
+
+.slideshow li:nth-child(6) { 
+    background-image: linear-gradient(rgba(0,0,0, .25), rgba(0,0,0, .25)), image-url("starters.png");
+    animation-delay: 30s;
 }
 
 .splash-container{

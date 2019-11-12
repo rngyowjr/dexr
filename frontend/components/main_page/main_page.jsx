@@ -1,5 +1,6 @@
 import React from 'react';
 import PhotoIndexContainer from '../photo_index/photo_index_container';
+import SlideshowContainer from '../slideshow/slideshow_container';
 import SplashContainer from '../splash/splash_container';
 import FooterContainer from '../footer/footer_container';
 
@@ -12,12 +13,11 @@ const MainPage = ({ currentUser }) => {
     );
 
     const splash = () => (
-        <div className="test">
-            <div className="splash-container">
-                <div className="splash-image-container"></div>
-                <SplashContainer />
-                <FooterContainer />
-            </div>
+        <div className="splash-container">
+            {/* <div className="splash-image-container"></div> */}
+            <SlideshowContainer />
+            <SplashContainer />
+            <FooterContainer />
         </div>
     );
 
