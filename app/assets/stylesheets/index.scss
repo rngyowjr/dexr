@@ -1,9 +1,9 @@
-.index-pic{
-    background-image: image-url("eevee.png");
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.dex{
+.index-container{
+    background-color: seagreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
 }

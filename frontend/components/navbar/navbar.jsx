@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const NavBar = ({ currentUser, logout }) => {
     const anonymousNav = () => (
-        <nav className="nav-tools">
+        <nav className="nav-entry-tools">
             <div className="nav-search-bar-container">
                 <div className="nav-search-bar">
                     <i className="fas fa-search"></i>
@@ -24,10 +24,14 @@ const NavBar = ({ currentUser, logout }) => {
         </nav>
     );
     const personalNav = () => (
-        <hgroup className="header-group">
-            <h2 className="header-name">Heya {currentUser.username}!</h2>
-            <button className="header-button" onClick={logout}>Log Out</button>
-        </hgroup>
+        <nav className="nav-exit-tools">
+            <div className="nav-entry-container">
+                <h2 className="nav-greeting">Heya {currentUser.username}!</h2>
+                <div className="nav-logout-container">
+                    <button className="nav-logout" onClick={logout}>Log Out</button>
+                </div>
+            </div>
+        </nav>
     );
 
     return (

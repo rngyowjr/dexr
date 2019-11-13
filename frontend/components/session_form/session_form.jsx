@@ -38,32 +38,35 @@ class SessionForm extends React.Component {
     render() {
         console.log(this.props.history)
         return (
-            <div className="login-form-container">
-                <form onSubmit={this.handleSubmit} className="login-form-box">
-                    Welcome to Dexr
-                    <br />
-                    Please {this.props.formType} or {this.props.navLink}
-                    {this.renderErrors()}
-                    <div className="login-form">
-                        <br />
-                        <label>Username:
-                            <input type="text"
-                                value={this.state.username}
-                                onChange={this.update('username')}
-                                className="username-input"
-                            />
-                        </label>
-                        <br />
-                        <label>Password:
-                            <input type="password"
-                                value={this.state.password}
-                                onChange={this.update('password')}
-                                className="password-input"
-                            />
-                        </label>
-                        <br />
-                        <input className="session-submit" type="submit" value={this.props.formType} />
+            <div className="login-content-container">
+                <form onSubmit={this.handleSubmit} className="login-form-container">
+                    <img className="login-icon" src={window.images.loginicon} />
+                    <h1 className="login-title">Please {this.props.formType} to dexr</h1>
+                    <div className="session-errors">
+                        {this.renderErrors()}
                     </div>
+                    <div className="login-form">
+                        <input type="text"
+                            value={this.state.username}
+                            onChange={this.update('username')}
+                            className="username-input"
+                            placeholder="Username"
+                        />
+                        <input type="password"
+                            value={this.state.password}
+                            onChange={this.update('password')}
+                            className="password-input"
+                            placeholder="Password"
+                        />
+                        <input className="session-submit" type="submit" value={this.props.formType} />
+                        <div className="login-pillow"></div>
+                    </div>
+                    <div className="session-alt-container">
+                        <p className="session-alt-text">
+                            {this.props.formType === "Sign Up" ? "Not a Dexr member?" : "Already a Dexr member?"}
+                        </p>
+                        <div className="session-alt-link"> {this.props.navLink} </div>
+                    </div> 
                 </form>
             </div>
         );

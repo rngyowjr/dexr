@@ -14,7 +14,6 @@ const MainPage = ({ currentUser }) => {
 
     const splash = () => (
         <div className="splash-container">
-            {/* <div className="splash-image-container"></div> */}
             <SlideshowContainer />
             <SplashContainer />
             <FooterContainer />

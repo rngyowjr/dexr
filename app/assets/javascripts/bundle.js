@@ -350,7 +350,7 @@ var NavBar = function NavBar(_ref) {
 
   var anonymousNav = function anonymousNav() {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
-      className: "nav-tools"
+      className: "nav-entry-tools"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "nav-search-bar-container"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -377,14 +377,18 @@ var NavBar = function NavBar(_ref) {
   };
 
   var personalNav = function personalNav() {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hgroup", {
-      className: "header-group"
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+      className: "nav-exit-tools"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "nav-entry-container"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
-      className: "header-name"
-    }, "Heya ", currentUser.username, "!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      className: "header-button",
+      className: "nav-greeting"
+    }, "Heya ", currentUser.username, "!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "nav-logout-container"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      className: "nav-logout",
       onClick: logout
-    }, "Log Out"));
+    }, "Log Out"))));
   };
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -480,9 +484,11 @@ function (_React$Component) {
   _createClass(PhotoIndex, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "index-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "this is the index"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "index-pic"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "this is the index"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "dex",
         src: window.images.eevee,
         alt: "test"
@@ -564,8 +570,8 @@ var Root = function Root(_ref) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _actions_session_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/session_actions */ "./frontend/actions/session_actions.js");
 /* harmony import */ var _session_form__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./session_form */ "./frontend/components/session_form/session_form.jsx");
 
@@ -578,10 +584,11 @@ var mSTP = function mSTP(_ref) {
   var errors = _ref.errors;
   return {
     errors: errors.sessionErrors,
-    formType: 'login',
-    navLink: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-      to: "/signup"
-    }, "sign up instead")
+    formType: 'Log In',
+    navLink: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      to: "/signup",
+      className: "session-alt-link"
+    }, " Sign up here. ")
   };
 };
 
@@ -593,7 +600,7 @@ var mDTP = function mDTP(dispatch) {
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mSTP, mDTP)(_session_form__WEBPACK_IMPORTED_MODULE_4__["default"]));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mSTP, mDTP)(_session_form__WEBPACK_IMPORTED_MODULE_4__["default"]));
 
 /***/ }),
 
@@ -683,27 +690,44 @@ function (_React$Component) {
     value: function render() {
       console.log(this.props.history);
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "login-form-container"
+        className: "login-content-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit,
-        className: "login-form-box"
-      }, "Welcome to Dexr", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Please ", this.props.formType, " or ", this.props.navLink, this.renderErrors(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "login-form-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "login-icon",
+        src: window.images.loginicon
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+        className: "login-title"
+      }, "Please ", this.props.formType, " to dexr"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "session-errors"
+      }, this.renderErrors()), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "login-form"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Username:", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         value: this.state.username,
         onChange: this.update('username'),
-        className: "username-input"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Password:", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "username-input",
+        placeholder: "Username"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "password",
         value: this.state.password,
         onChange: this.update('password'),
-        className: "password-input"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "password-input",
+        placeholder: "Password"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "session-submit",
         type: "submit",
         value: this.props.formType
-      }))));
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "login-pillow"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "session-alt-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "session-alt-text"
+      }, this.props.formType === "Sign Up" ? "Not a Dexr member?" : "Already a Dexr member?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "session-alt-link"
+      }, " ", this.props.navLink, " "))));
     }
   }]);
 
@@ -725,8 +749,8 @@ function (_React$Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _actions_session_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/session_actions */ "./frontend/actions/session_actions.js");
 /* harmony import */ var _session_form__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./session_form */ "./frontend/components/session_form/session_form.jsx");
 
@@ -739,10 +763,11 @@ var mSTP = function mSTP(_ref) {
   var errors = _ref.errors;
   return {
     errors: errors.sessionErrors,
-    formType: 'signup',
-    navLink: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-      to: "/login"
-    }, "log in instead")
+    formType: 'Sign Up',
+    navLink: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      to: "/login",
+      className: "session-alt-link"
+    }, " Log in here.  ")
   };
 };
 
@@ -754,7 +779,7 @@ var mDTP = function mDTP(dispatch) {
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mSTP, mDTP)(_session_form__WEBPACK_IMPORTED_MODULE_4__["default"]));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mSTP, mDTP)(_session_form__WEBPACK_IMPORTED_MODULE_4__["default"]));
 
 /***/ }),
 
@@ -964,7 +989,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _store_store__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./store/store */ "./frontend/store/store.js");
 /* harmony import */ var _components_root__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/root */ "./frontend/components/root.jsx");
-/* harmony import */ var _util_session_api_util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./util/session_api_util */ "./frontend/util/session_api_util.js");
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
@@ -972,12 +997,21 @@ __webpack_require__.r(__webpack_exports__);
 
 document.addEventListener("DOMContentLoaded", function () {
   var root = document.getElementById("root");
-  var store = Object(_store_store__WEBPACK_IMPORTED_MODULE_2__["default"])();
+  var preloadedState = undefined;
+
+  if (window.currentUser) {
+    preloadedState = {
+      entities: {
+        users: _defineProperty({}, window.currentUser.id, window.currentUser)
+      },
+      session: {
+        currentUser: window.currentUser.id
+      }
+    };
+  }
+
+  var store = Object(_store_store__WEBPACK_IMPORTED_MODULE_2__["default"])(preloadedState);
   window.getState = store.getState;
-  window.dispatch = store.dispatch;
-  window.signup = _util_session_api_util__WEBPACK_IMPORTED_MODULE_4__["signup"];
-  window.login = _util_session_api_util__WEBPACK_IMPORTED_MODULE_4__["login"];
-  window.logout = _util_session_api_util__WEBPACK_IMPORTED_MODULE_4__["logout"];
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_root__WEBPACK_IMPORTED_MODULE_3__["default"], {
     store: store
   }), root);
@@ -33596,7 +33630,7 @@ function warning(message) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter, BrowserRouter, HashRouter, Link, NavLink */
+/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

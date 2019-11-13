@@ -11,7 +11,6 @@ class Slideshow extends React.Component {
                     <li className="slide4"></li>
                     <li className="slide5"></li>
                     <li className="slide6"></li>
-                    
                 </ul>
             </div>
         )

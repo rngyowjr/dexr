@@ -11,9 +11,19 @@
     <script type="text/javascript">
       window.images = {
         eevee: "<%= image_url('eevee.png') %>",
+        loginicon: "<%= image_url('pokeball.jpg') %>",
       }
     </script>
   
+    <% if current_user %>
+      <script>
+        window.currentUser = {
+          "id": <%= current_user.id%>,
+          "username": "<%= current_user.username%>"
+        };
+      </script>
+    <% end %>
+    
   </head>
 
   <body>

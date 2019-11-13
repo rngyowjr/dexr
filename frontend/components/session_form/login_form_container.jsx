@@ -1,13 +1,14 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 import { login } from '../../actions/session_actions';
 import SessionForm from './session_form';
 
 const mSTP = ({ errors }) => ({
     errors: errors.sessionErrors,
-    formType: 'login',
-    navLink: <Link to="/signup">sign up instead</Link>
+    formType: 'Log In',
+    navLink: <Link to="/signup" className="session-alt-link"
+    > Sign up here. </Link>
 });
 
 const mDTP = dispatch => ({
