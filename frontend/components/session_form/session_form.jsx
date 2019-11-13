@@ -1,4 +1,5 @@
 import React from 'react';
+import { login } from '../../actions/session_actions';
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -20,6 +21,13 @@ class SessionForm extends React.Component {
         e.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.processForm(user)
+            .then(() => this.props.history.push(`/`));
+    }
+
+    demo(e) {
+        e.preventDefault();
+        const user = {username: TimTheTester, password: timtim};
+        dispatch(login(user))
             .then(() => this.props.history.push(`/`));
     }
 
@@ -59,14 +67,18 @@ class SessionForm extends React.Component {
                             placeholder="Password"
                         />
                         <input className="session-submit" type="submit" value={this.props.formType} />
-                        <div className="login-pillow"></div>
                     </div>
+                    <div className="login-pillow"></div>
                     <div className="session-alt-container">
                         <p className="session-alt-text">
-                            {this.props.formType === "Sign Up" ? "Not a Dexr member?" : "Already a Dexr member?"}
+                            {this.props.formType === "Log In" ? "Not a Dexr member?" : "Already a Dexr member?"}
                         </p>
                         <div className="session-alt-link"> {this.props.navLink} </div>
                     </div> 
+                    <div className="login-pillow"></div>
+                    <div className="demo-container">
+                        <button className="demo-button" type="button" onClick="demo">Demo Login </button>
+                    </div>
                 </form>
             </div>
         );

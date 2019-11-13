@@ -11,13 +11,12 @@
 }
 
 .login-form-container{
-    height: 375px;
     width: 300px;
     display: flex;
     flex-direction: column;
     background-color: lightgray;
     border-radius: 5px;
-    padding: 10px;
+    padding: 20px 10px;
     align-items: center;
     justify-content: center;
 }
@@ -74,12 +73,12 @@
 .login-pillow{
     margin-top: 1rem;
     margin-bottom: 1rem;
-    width: 100%;
+    width: 80%;
     border-bottom: 1px solid darkgrey;
 }
 
 .session-alt-container{
-    width: 80%;
+    width: 75%;
     display: flex;
     font-size: 0.75rem;
     justify-content: space-around;
@@ -94,4 +93,26 @@
 
 .session-errors{
     text-align: center;
+}
+
+.demo-container{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.demo-button{
+    background-color: #128fdc;
+    color: white;
+    padding: 8px 24px;
+    border-radius: 3px;
+    font-weight: 600;
+    width: 60%;
+    font-size: 1rem;
+}
+
+.demo-button:hover{
+    background-color: #3e9dd8;
 }
