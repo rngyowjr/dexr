@@ -11,5 +11,3 @@ demo_user = User.create!(
     username: "Tim the Tester",
     password: "timtimtim"
 )
-
-p "Userbase has been reset"
