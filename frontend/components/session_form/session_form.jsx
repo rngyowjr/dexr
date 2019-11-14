@@ -1,5 +1,4 @@
 import React from 'react';
-import { login } from '../../actions/session_actions';
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -28,7 +27,7 @@ class SessionForm extends React.Component {
     demo(e) {
         e.preventDefault();
         const user = {username: "Tim the Tester", password: "timtimtim"};
-        dispatch(login(user))
+        this.props.processDemo(user)
             .then(() => this.props.history.push(`/`));
     }
 
