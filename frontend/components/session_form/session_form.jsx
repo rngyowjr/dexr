@@ -9,6 +9,7 @@ class SessionForm extends React.Component {
             password: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.demo = this.demo.bind(this);
     }
 
     update(field) {
@@ -26,7 +27,7 @@ class SessionForm extends React.Component {
 
     demo(e) {
         e.preventDefault();
-        const user = {username: TimTheTester, password: timtim};
+        const user = {username: "Tim the Tester", password: "timtimtim"};
         dispatch(login(user))
             .then(() => this.props.history.push(`/`));
     }
@@ -47,7 +48,7 @@ class SessionForm extends React.Component {
         console.log(this.props.history)
         return (
             <div className="login-content-container">
-                <form onSubmit={this.handleSubmit} className="login-form-container">
+                <form className="login-form-container" onSubmit={this.handleSubmit}>
                     <img className="login-icon" src={window.images.loginicon} />
                     <h1 className="login-title">Please {this.props.formType} to dexr</h1>
                     <div className="session-errors">
@@ -77,7 +78,7 @@ class SessionForm extends React.Component {
                     </div> 
                     <div className="login-pillow"></div>
                     <div className="demo-container">
-                        <button className="demo-button" type="button" onClick="demo">Demo Login </button>
+                        <button className="demo-button" type="button" onClick={this.demo}>Demo Login </button>
                     </div>
                 </form>
             </div>

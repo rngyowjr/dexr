@@ -655,6 +655,7 @@ function (_React$Component) {
       password: ''
     };
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
+    _this.demo = _this.demo.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -685,8 +686,8 @@ function (_React$Component) {
 
       e.preventDefault();
       var user = {
-        username: TimTheTester,
-        password: timtim
+        username: "Tim the Tester",
+        password: "timtimtim"
       };
       dispatch(Object(_actions_session_actions__WEBPACK_IMPORTED_MODULE_1__["login"])(user)).then(function () {
         return _this4.props.history.push("/");
@@ -708,8 +709,8 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "login-content-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-        onSubmit: this.handleSubmit,
-        className: "login-form-container"
+        className: "login-form-container",
+        onSubmit: this.handleSubmit
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "login-icon",
         src: window.images.loginicon
@@ -750,7 +751,7 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "demo-button",
         type: "button",
-        onClick: "demo"
+        onClick: this.demo
       }, "Demo Login "))));
     }
   }]);
