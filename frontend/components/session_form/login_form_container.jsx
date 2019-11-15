@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 import { login } from '../../actions/session_actions';
 import SessionForm from './session_form';
 
-const mSTP = ({ errors }) => ({
-    errors: errors.sessionErrors,
+const mSTP = state => ({
+    errors: state.errors.sessionErrors,
     formType: 'Log In',
     navLink: <Link to="/signup" className="session-alt-link"
     > Sign up here. </Link>

@@ -17,7 +17,7 @@ const NavBar = ({ currentUser, logout }) => {
             </div>
             <div className="nav-entry-container">
                 <Link to="/login" className="nav-login">Log In</Link>
-                <div className="signup-container">
+                <div className="nav-signup-container">
                     <Link to="/signup" className="nav-signup">Sign Up</Link>
                 </div>
             </div>
@@ -26,7 +26,9 @@ const NavBar = ({ currentUser, logout }) => {
     const personalNav = () => (
         <nav className="nav-exit-tools">
             <div className="nav-entry-container">
-                <h2 className="nav-greeting">Heya {currentUser.username}!</h2>
+                <div className="nav-create-container">
+                    <Link to="/create" className="nav-create">Add a Photo</Link>
+                </div>
                 <div className="nav-logout-container">
                     <button className="nav-logout" onClick={logout}>Log Out</button>
                 </div>

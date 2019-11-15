@@ -37,6 +37,8 @@ class SessionForm extends React.Component {
                 {this.props.errors.map((error, i) => (
                     <li key={`error-${i}`}>
                         {error}
+                        <br />
+                        <br />
                     </li>
                 ))}
             </ul>
@@ -44,7 +46,6 @@ class SessionForm extends React.Component {
     }
 
     render() {
-        console.log(this.props.history)
         return (
             <div className="login-content-container">
                 <form className="login-form-container" onSubmit={this.handleSubmit}>

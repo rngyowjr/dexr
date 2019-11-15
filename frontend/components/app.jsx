@@ -5,6 +5,7 @@ import NavBarContainer from './navbar/navbar_container';
 import MainPage from './main_page/main_page_container';
 import SignupFormContainer from './session_form/signup_form_container';
 import LoginFormContainer from './session_form/login_form_container';
+import CreateFormContainer from './create_form/create_form_container';
 
 const App = () => (
     <div className="app">
@@ -15,6 +16,7 @@ const App = () => (
             <Switch>
                 <Route path="/signup" component={SignupFormContainer} />
                 <Route path="/login" component={LoginFormContainer} />
+                <Route path="/create" component={CreateFormContainer} />
                 <Route path="/" component={MainPage} />
             </Switch>
         </section>

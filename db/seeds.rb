@@ -11,3 +11,29 @@ demo_user = User.create!(
     username: "Tim the Tester",
     password: "timtimtim"
 )
+
+Photo.destroy_all
+
+pikachu = Photo.create!(
+    title: "Pikachu",
+    img_url: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png",
+    author_id: 1
+)
+
+bulbasaur = Photo.create!(
+    title: "Bulbasaur",
+    img_url: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
+    author_id: 1
+)
+
+charmander = Photo.create!(
+    title: "Charmander",
+    img_url: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png",
+    author_id: 1
+)
+
+squirtle = Photo.create!(
+    title: "Squirtle",
+    img_url: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png",
+    author_id: 1
+)

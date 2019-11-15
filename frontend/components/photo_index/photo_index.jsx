@@ -1,17 +1,25 @@
 import React from 'react';
+import PhotoIndexItem from './photo_index_item';
 
 class PhotoIndex extends React.Component {
+    componentDidMount() {
+        this.props.requestPhotos();
+    }
+    
     render () {
+        const { photos, deletePhoto, errors } = this.props;
+
         return (
-            <div className="index-container">
-                <h1>this is the index</h1>
-                <div className="index-pic">
-
-                    <img className="dex" src={window.images.eevee} alt="test"/>
+            <div className="index-content-container">
+                <h1 className="index-welcome">Welcome to dexr {this.props.currentUser.username}!</h1>
+                
+                <div className="index-photos-container">
+                    <ul className="index-photos-list">
+                        {
+                            photos.map(photo => <PhotoIndexItem key={photo.id} photo={photo} deletePhoto={deletePhoto} errors={errors} />)
+                        }
+                    </ul>
                 </div>
-
-
-
             </div> 
 
         )
@@ -19,3 +27,4 @@ class PhotoIndex extends React.Component {
 }
 
 export default PhotoIndex;
+

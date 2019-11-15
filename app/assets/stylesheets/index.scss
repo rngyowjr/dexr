@@ -1,9 +1,99 @@
-.index-container{
-    background-color: seagreen;
+.index-content-container{
+    background-color: rgb(33, 109, 66);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     height: 100%;
     width: 100%;
+}
+
+.index-bg-container{
+    background-image: linear-gradient(rgba(0,0,0, .25), rgba(0,0,0, .25)), image-url("bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center bottom;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+}
+
+.index-welcome{
+    font-size: 50px;
+    font-weight: 500;
+    margin: 40px 0;
+}
+
+.index-photos-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 60%;
+}
+
+.index-photos-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;;
+}
+
+.index-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: gray;
+    margin-bottom: 20px;
+    padding: 10px 10px;
+}
+
+.index-item-title{
+    font-size: 25px;
+    margin-bottom: 0.75rem;
+}
+
+.index-item-photo-container{
+    height: 475px;
+    width: 475px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.index-item-photo{
+    height: auto;
+    width: auto;
+}
+
+.index-item-errors{
+    text-decoration: underline;
+}
+
+.index-item-delete-container{
+    display: flex;
+    white-space: nowrap;
+    align-content: center;
+    height: 32px;
+}
+
+.index-item-delete{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    text-decoration: none;
+    padding: 0 20px;
+    border-radius: 3px;
+    color: black;
+    font-weight: 500;
+    margin-top: 0.75rem;;
+}
+
+.index-item-delete:hover{
+    transition: 0.3s;
+    color: red; 
 }
