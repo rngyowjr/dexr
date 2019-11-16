@@ -90,7 +90,7 @@
 /*!*******************************************!*\
   !*** ./frontend/actions/photo_actions.js ***!
   \*******************************************/
-/*! exports provided: RECEIVE_PHOTOS, RECEIVE_PHOTO, REMOVE_PHOTO, RECEIVE_CREATE_ERRORS, RECEIVE_DELETE_ERRORS, requestPhotos, createPhoto, deletePhoto */
+/*! exports provided: RECEIVE_PHOTOS, RECEIVE_PHOTO, REMOVE_PHOTO, RECEIVE_CREATE_ERRORS, RECEIVE_DELETE_ERRORS, fetchPhotos, createPhoto, deletePhoto */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -100,7 +100,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "REMOVE_PHOTO", function() { return REMOVE_PHOTO; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_CREATE_ERRORS", function() { return RECEIVE_CREATE_ERRORS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_DELETE_ERRORS", function() { return RECEIVE_DELETE_ERRORS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "requestPhotos", function() { return requestPhotos; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchPhotos", function() { return fetchPhotos; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createPhoto", function() { return createPhoto; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deletePhoto", function() { return deletePhoto; });
 /* harmony import */ var _util_photo_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/photo_api_util */ "./frontend/util/photo_api_util.js");
@@ -146,7 +146,7 @@ var receiveDeleteErrors = function receiveDeleteErrors(errors) {
   };
 };
 
-var requestPhotos = function requestPhotos() {
+var fetchPhotos = function fetchPhotos() {
   return function (dispatch) {
     return _util_photo_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchPhotos"]().then(function (photos) {
       return dispatch(receivePhotos(photos));
@@ -750,7 +750,7 @@ function (_React$Component) {
   _createClass(PhotoIndex, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.props.requestPhotos();
+      this.props.fetchPhotos();
     }
   }, {
     key: "render",
@@ -811,8 +811,8 @@ var mSTP = function mSTP(state) {
 
 var mDTP = function mDTP(dispatch) {
   return {
-    requestPhotos: function requestPhotos() {
-      return dispatch(Object(_actions_photo_actions__WEBPACK_IMPORTED_MODULE_2__["requestPhotos"])());
+    fetchPhotos: function fetchPhotos() {
+      return dispatch(Object(_actions_photo_actions__WEBPACK_IMPORTED_MODULE_2__["fetchPhotos"])());
     },
     deletePhoto: function deletePhoto(eventId) {
       return dispatch(Object(_actions_photo_actions__WEBPACK_IMPORTED_MODULE_2__["deletePhoto"])(eventId));
@@ -34195,7 +34195,7 @@ function warning(message) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter, BrowserRouter, HashRouter, Link, NavLink */
+/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

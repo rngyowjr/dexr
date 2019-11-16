@@ -31,7 +31,7 @@ const receiveDeleteErrors = errors => ({
     errors
 });
 
-export const requestPhotos = () => dispatch => (
+export const fetchPhotos = () => dispatch => (
     PhotoAPIUtil.fetchPhotos()
         .then(photos => dispatch(receivePhotos(photos)))
 );

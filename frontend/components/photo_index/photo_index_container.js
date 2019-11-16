@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import PhotoIndex from './photo_index';
-import { requestPhotos, deletePhoto } from '../../actions/photo_actions';
+import { fetchPhotos, deletePhoto } from '../../actions/photo_actions';
 
 const mSTP = state => ({
     errors: state.errors.deleteErrors,
@@ -9,7 +9,7 @@ const mSTP = state => ({
 });
 
 const mDTP = dispatch => ({
-    requestPhotos: () => dispatch(requestPhotos()),
+    fetchPhotos: () => dispatch(fetchPhotos()),
     deletePhoto: (eventId) => dispatch(deletePhoto(eventId))
 });
 

@@ -3,7 +3,7 @@ import PhotoIndexItem from './photo_index_item';
 
 class PhotoIndex extends React.Component {
     componentDidMount() {
-        this.props.requestPhotos();
+        this.props.fetchPhotos();
     }
     
     render () {
