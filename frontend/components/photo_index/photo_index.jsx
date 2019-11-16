@@ -16,7 +16,7 @@ class PhotoIndex extends React.Component {
                 <div className="index-photos-container">
                     <ul className="index-photos-list">
                         {
-                            photos.map(photo => <PhotoIndexItem key={photo.id} photo={photo} deletePhoto={deletePhoto} errors={errors} />)
+                            photos.reverse().map(photo => <PhotoIndexItem key={photo.id} photo={photo} deletePhoto={deletePhoto} errors={errors} />)
                         }
                     </ul>
                 </div>
