@@ -26624,3 +26624,406 @@ Processing by Api::PhotosController#index as JSON
 Completed 200 OK in 21ms (Views: 17.1ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/" for ::1 at 2019-11-15 20:36:57 -0800
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ninja_mac/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "r_bMZ9vy3Y-_48_qDqYa3A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 1397ms (Views: 1387.6ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/api/photos" for ::1 at 2019-11-15 20:36:59 -0800
+Processing by Api::PhotosController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "r_bMZ9vy3Y-_48_qDqYa3A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering api/photos/index.json.jbuilder
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/api/photos/index.json.jbuilder:1
+  Rendered api/photos/_photo.json.jbuilder (0.3ms)
+  Rendered api/photos/_photo.json.jbuilder (0.0ms)
+  Rendered api/photos/_photo.json.jbuilder (0.0ms)
+  Rendered api/photos/_photo.json.jbuilder (0.0ms)
+  Rendered api/photos/_photo.json.jbuilder (0.2ms)
+  Rendered api/photos/_photo.json.jbuilder (0.1ms)
+  Rendered api/photos/_photo.json.jbuilder (0.1ms)
+  Rendered api/photos/index.json.jbuilder (19.8ms)
+Completed 200 OK in 34ms (Views: 20.8ms | ActiveRecord: 6.5ms)
+
+
+Started POST "/api/photos" for ::1 at 2019-11-15 20:37:05 -0800
+Processing by Api::PhotosController#create as JSON
+  Parameters: {"photo"=>{"title"=>"test", "img_url"=>"test", "author_id"=>"10"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "r_bMZ9vy3Y-_48_qDqYa3A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/photos_controller.rb:11
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/photos_controller.rb:11
+  [1m[36mPhoto Create (0.5ms)[0m  [1m[32mINSERT INTO "photos" ("title", "img_url", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "test"], ["img_url", "test"], ["author_id", 10], ["created_at", "2019-11-16 04:37:05.380767"], ["updated_at", "2019-11-16 04:37:05.380767"]]
+  ↳ app/controllers/api/photos_controller.rb:11
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/photos_controller.rb:11
+  Rendering api/photos/show.json.jbuilder
+  Rendered api/photos/_photo.json.jbuilder (0.2ms)
+  Rendered api/photos/show.json.jbuilder (1.3ms)
+Completed 200 OK in 22ms (Views: 7.8ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/api/photos" for ::1 at 2019-11-15 20:37:05 -0800
+Started GET "/test" for ::1 at 2019-11-15 20:37:05 -0800
+Processing by Api::PhotosController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "r_bMZ9vy3Y-_48_qDqYa3A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering api/photos/index.json.jbuilder
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/api/photos/index.json.jbuilder:1
+  Rendered api/photos/_photo.json.jbuilder (0.4ms)
+  Rendered api/photos/_photo.json.jbuilder (0.1ms)
+  Rendered api/photos/_photo.json.jbuilder (0.1ms)
+  Rendered api/photos/_photo.json.jbuilder (0.1ms)
+  Rendered api/photos/_photo.json.jbuilder (0.1ms)
+  Rendered api/photos/_photo.json.jbuilder (0.0ms)
+  Rendered api/photos/_photo.json.jbuilder (0.0ms)
+  Rendered api/photos/_photo.json.jbuilder (0.0ms)
+  Rendered api/photos/index.json.jbuilder (9.1ms)
+Completed 200 OK in 20ms (Views: 16.0ms | ActiveRecord: 0.8ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/test"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started DELETE "/api/photos/37" for ::1 at 2019-11-15 20:37:21 -0800
+Processing by Api::PhotosController#destroy as JSON
+  Parameters: {"id"=>"37"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "r_bMZ9vy3Y-_48_qDqYa3A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."author_id" = $1 AND "photos"."id" = $2 LIMIT $3[0m  [["author_id", 10], ["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/api/photos_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/photos_controller.rb:21
+  [1m[36mPhoto Destroy (0.3ms)[0m  [1m[31mDELETE FROM "photos" WHERE "photos"."id" = $1[0m  [["id", 37]]
+  ↳ app/controllers/api/photos_controller.rb:21
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/photos_controller.rb:21
+No template found for Api::PhotosController#destroy, rendering head :no_content
+Completed 204 No Content in 106ms (ActiveRecord: 2.1ms)
+
+
+Started POST "/api/photos" for ::1 at 2019-11-15 20:37:25 -0800
+Processing by Api::PhotosController#create as JSON
+  Parameters: {"photo"=>{"title"=>"test", "img_url"=>"test", "author_id"=>"10"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "r_bMZ9vy3Y-_48_qDqYa3A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/photos_controller.rb:11
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/photos_controller.rb:11
+  [1m[36mPhoto Create (0.5ms)[0m  [1m[32mINSERT INTO "photos" ("title", "img_url", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "test"], ["img_url", "test"], ["author_id", 10], ["created_at", "2019-11-16 04:37:25.619757"], ["updated_at", "2019-11-16 04:37:25.619757"]]
+  ↳ app/controllers/api/photos_controller.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/photos_controller.rb:11
+  Rendering api/photos/show.json.jbuilder
+  Rendered api/photos/_photo.json.jbuilder (0.2ms)
+  Rendered api/photos/show.json.jbuilder (1.2ms)
+Completed 200 OK in 13ms (Views: 7.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/photos" for ::1 at 2019-11-15 20:37:25 -0800
+Started GET "/test" for ::1 at 2019-11-15 20:37:25 -0800
+Processing by Api::PhotosController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "r_bMZ9vy3Y-_48_qDqYa3A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  
+ActionController::RoutingError (No route matches [GET] "/test"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  Rendering api/photos/index.json.jbuilder
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/api/photos/index.json.jbuilder:1
+  Rendered api/photos/_photo.json.jbuilder (0.3ms)
+  Rendered api/photos/_photo.json.jbuilder (0.1ms)
+  Rendered api/photos/_photo.json.jbuilder (0.1ms)
+  Rendered api/photos/_photo.json.jbuilder (0.0ms)
+  Rendered api/photos/_photo.json.jbuilder (0.1ms)
+  Rendered api/photos/_photo.json.jbuilder (0.0ms)
+  Rendered api/photos/_photo.json.jbuilder (0.0ms)
+  Rendered api/photos/_photo.json.jbuilder (0.0ms)
+  Rendered api/photos/index.json.jbuilder (10.2ms)
+Completed 200 OK in 27ms (Views: 22.2ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/api/photos/38" for ::1 at 2019-11-15 20:37:27 -0800
+Processing by Api::PhotosController#destroy as JSON
+  Parameters: {"id"=>"38"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "r_bMZ9vy3Y-_48_qDqYa3A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."author_id" = $1 AND "photos"."id" = $2 LIMIT $3[0m  [["author_id", 10], ["id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/api/photos_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/photos_controller.rb:21
+  [1m[36mPhoto Destroy (0.3ms)[0m  [1m[31mDELETE FROM "photos" WHERE "photos"."id" = $1[0m  [["id", 38]]
+  ↳ app/controllers/api/photos_controller.rb:21
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/photos_controller.rb:21
+No template found for Api::PhotosController#destroy, rendering head :no_content
+Completed 204 No Content in 102ms (ActiveRecord: 1.6ms)
+
+
+Started POST "/api/photos" for ::1 at 2019-11-15 20:37:37 -0800
+Processing by Api::PhotosController#create as JSON
+  Parameters: {"photo"=>{"title"=>"test", "img_url"=>"https://assets.pokemon.com/assets/cms2/img/pokedex/full/252.png", "author_id"=>"10"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "r_bMZ9vy3Y-_48_qDqYa3A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/photos_controller.rb:11
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/photos_controller.rb:11
+  [1m[36mPhoto Create (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("title", "img_url", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "test"], ["img_url", "https://assets.pokemon.com/assets/cms2/img/pokedex/full/252.png"], ["author_id", 10], ["created_at", "2019-11-16 04:37:37.089534"], ["updated_at", "2019-11-16 04:37:37.089534"]]
+  ↳ app/controllers/api/photos_controller.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/photos_controller.rb:11
+  Rendering api/photos/show.json.jbuilder
+  Rendered api/photos/_photo.json.jbuilder (0.2ms)
+  Rendered api/photos/show.json.jbuilder (1.3ms)
+Completed 200 OK in 19ms (Views: 14.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/photos" for ::1 at 2019-11-15 20:37:37 -0800
+Processing by Api::PhotosController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "r_bMZ9vy3Y-_48_qDqYa3A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering api/photos/index.json.jbuilder
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/api/photos/index.json.jbuilder:1
+  Rendered api/photos/_photo.json.jbuilder (0.3ms)
+  Rendered api/photos/_photo.json.jbuilder (0.1ms)
+  Rendered api/photos/_photo.json.jbuilder (0.1ms)
+  Rendered api/photos/_photo.json.jbuilder (0.0ms)
+  Rendered api/photos/_photo.json.jbuilder (0.0ms)
+  Rendered api/photos/_photo.json.jbuilder (0.0ms)
+  Rendered api/photos/_photo.json.jbuilder (0.0ms)
+  Rendered api/photos/_photo.json.jbuilder (0.0ms)
+  Rendered api/photos/index.json.jbuilder (8.2ms)
+Completed 200 OK in 19ms (Views: 15.2ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/api/photos/39" for ::1 at 2019-11-15 20:37:41 -0800
+Processing by Api::PhotosController#destroy as JSON
+  Parameters: {"id"=>"39"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "r_bMZ9vy3Y-_48_qDqYa3A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."author_id" = $1 AND "photos"."id" = $2 LIMIT $3[0m  [["author_id", 10], ["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/photos_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/photos_controller.rb:21
+  [1m[36mPhoto Destroy (0.2ms)[0m  [1m[31mDELETE FROM "photos" WHERE "photos"."id" = $1[0m  [["id", 39]]
+  ↳ app/controllers/api/photos_controller.rb:21
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/photos_controller.rb:21
+No template found for Api::PhotosController#destroy, rendering head :no_content
+Completed 204 No Content in 99ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2019-11-20 14:47:20 -0800
+
+PG::ConnectionBad - could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+:
+
+Started POST "/__better_errors/d0a9044acab05640/variables" for ::1 at 2019-11-20 14:47:20 -0800
+Started GET "/" for ::1 at 2019-11-20 14:47:34 -0800
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ninja_mac/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "r_bMZ9vy3Y-_48_qDqYa3A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 1554ms (Views: 1537.5ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/api/photos" for ::1 at 2019-11-20 14:47:36 -0800
+Processing by Api::PhotosController#index as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "r_bMZ9vy3Y-_48_qDqYa3A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering api/photos/index.json.jbuilder
+  [1m[36mPhoto Load (6.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/api/photos/index.json.jbuilder:1
+  Rendered api/photos/_photo.json.jbuilder (0.4ms)
+  Rendered api/photos/_photo.json.jbuilder (0.1ms)
+  Rendered api/photos/_photo.json.jbuilder (0.0ms)
+  Rendered api/photos/_photo.json.jbuilder (0.0ms)
+  Rendered api/photos/_photo.json.jbuilder (0.1ms)
+  Rendered api/photos/_photo.json.jbuilder (0.1ms)
+  Rendered api/photos/_photo.json.jbuilder (0.2ms)
+  Rendered api/photos/index.json.jbuilder (46.2ms)
+Completed 200 OK in 76ms (Views: 40.4ms | ActiveRecord: 19.5ms)
+
+
+Started GET "/api/photos" for ::1 at 2019-11-20 14:48:11 -0800
+Processing by Api::PhotosController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "r_bMZ9vy3Y-_48_qDqYa3A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering api/photos/index.json.jbuilder
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/api/photos/index.json.jbuilder:1
+  Rendered api/photos/_photo.json.jbuilder (0.3ms)
+  Rendered api/photos/_photo.json.jbuilder (0.0ms)
+  Rendered api/photos/_photo.json.jbuilder (0.0ms)
+  Rendered api/photos/_photo.json.jbuilder (0.0ms)
+  Rendered api/photos/_photo.json.jbuilder (0.0ms)
+  Rendered api/photos/_photo.json.jbuilder (0.0ms)
+  Rendered api/photos/_photo.json.jbuilder (0.0ms)
+  Rendered api/photos/index.json.jbuilder (7.5ms)
+Completed 200 OK in 18ms (Views: 14.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2019-12-09 03:47:06 -0500
+
+PG::ConnectionBad - could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+:
+
+Started POST "/__better_errors/455e69eadec28214/variables" for ::1 at 2019-12-09 03:47:06 -0500
+Started GET "/" for ::1 at 2019-12-09 03:48:23 -0500
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ninja_mac/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "r_bMZ9vy3Y-_48_qDqYa3A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 1826ms (Views: 1811.4ms | ActiveRecord: 12.4ms)
+
+
+Started GET "/api/photos" for ::1 at 2019-12-09 03:48:25 -0500
+Processing by Api::PhotosController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "r_bMZ9vy3Y-_48_qDqYa3A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering api/photos/index.json.jbuilder
+  [1m[36mPhoto Load (2.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/api/photos/index.json.jbuilder:1
+  Rendered api/photos/_photo.json.jbuilder (0.6ms)
+  Rendered api/photos/_photo.json.jbuilder (0.1ms)
+  Rendered api/photos/_photo.json.jbuilder (0.1ms)
+  Rendered api/photos/_photo.json.jbuilder (0.1ms)
+  Rendered api/photos/_photo.json.jbuilder (0.1ms)
+  Rendered api/photos/_photo.json.jbuilder (0.0ms)
+  Rendered api/photos/_photo.json.jbuilder (0.1ms)
+  Rendered api/photos/index.json.jbuilder (28.7ms)
+Completed 200 OK in 48ms (Views: 23.2ms | ActiveRecord: 14.6ms)
+
+
+Started DELETE "/api/session" for ::1 at 2019-12-09 03:48:30 -0500
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "r_bMZ9vy3Y-_48_qDqYa3A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:30
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "tim"], ["id", 10], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30
+  [1m[36mUser Update (2.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "tohFHfUNGjP6nB1ohJJCMw"], ["updated_at", "2019-12-09 08:48:30.994685"], ["id", 10]]
+  ↳ app/models/user.rb:30
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:30
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/show.json.jbuilder (1.5ms)
+Completed 200 OK in 17ms (Views: 9.5ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/api/session" for ::1 at 2019-12-09 03:48:35 -0500
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"Tim the Tester", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim the Tester"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:30
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "Tim the Tester"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "Cp-8RRBHMsApKzQkO1bYWg"], ["updated_at", "2019-12-09 08:48:36.091643"], ["id", 8]]
+  ↳ app/models/user.rb:30
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:30
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/show.json.jbuilder (1.2ms)
+Completed 200 OK in 207ms (Views: 6.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/photos" for ::1 at 2019-12-09 03:48:36 -0500
+Processing by Api::PhotosController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Cp-8RRBHMsApKzQkO1bYWg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering api/photos/index.json.jbuilder
+  [1m[36mPhoto Load (0.7ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/api/photos/index.json.jbuilder:1
+  Rendered api/photos/_photo.json.jbuilder (0.4ms)
+  Rendered api/photos/_photo.json.jbuilder (0.1ms)
+  Rendered api/photos/_photo.json.jbuilder (0.1ms)
+  Rendered api/photos/_photo.json.jbuilder (0.1ms)
+  Rendered api/photos/_photo.json.jbuilder (0.1ms)
+  Rendered api/photos/_photo.json.jbuilder (0.0ms)
+  Rendered api/photos/_photo.json.jbuilder (0.0ms)
+  Rendered api/photos/index.json.jbuilder (9.5ms)
+Completed 200 OK in 22ms (Views: 16.7ms | ActiveRecord: 1.0ms)
+
+
