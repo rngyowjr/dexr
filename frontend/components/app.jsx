@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
+import { AuthRoute, ProtectedRoute } from '../util/route_utils';
 
 import NavBarContainer from './navbar/navbar_container';
 import MainPage from './main_page/main_page_container';
@@ -14,9 +15,9 @@ const App = () => (
         </header>
         <section className="section">
             <Switch>
-                <Route path="/signup" component={SignupFormContainer} />
-                <Route path="/login" component={LoginFormContainer} />
-                <Route path="/create" component={CreateFormContainer} />
+                <AuthRoute path="/signup" component={SignupFormContainer} />
+                <AuthRoute path="/login" component={LoginFormContainer} />
+                <ProtectedRoute path="/create" component={CreateFormContainer} />
                 <Route path="/" component={MainPage} />
             </Switch>
         </section>
